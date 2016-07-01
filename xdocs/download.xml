@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<document>
+    <properties>
+        <title>Download Clirr</title>
+        <author>Lars Kühne</author>
+    </properties>
+    <body>
+        <section name="Download Clirr">
+            <p>
+                The latest release of Clirr is available from the <a
+                href="http://sourceforge.net/project/showfiles.php?group_id=89627">Sourceforge
+                download page</a>.
+            </p>
+        </section>
+        <section name="Compile Clirr yourself">
+            <p>
+                To compile Clirr yourself you need to have the
+                following tools installed on your machine and
+                available in the command line search path:
+            </p>
+            <ul>
+                <li>
+                    <a href="http://maven.apache.org">Maven</a> 2.0.9.
+                    Maven 1 no longer works and other versions of Maven 2 are currently untested.
+                </li>
+                <li>
+                    A CVS client. If you are on Linux you probably
+                    already have that. If you are on Windows, you can use
+                    TortoiseCVS. For other platforms, please search
+                    Google for a precompiled client or build one
+                    yourself using the sources available from the <a
+                    href="http://www.cvshome.org">CVS homepage</a>.
+                </li>
+            </ul>
+            <p>
+                To build Clirr from CVS, open a command line shell, cd to an empty
+                directory and enter the following commands (when prompted
+                for a password for anonymous, simply press the Enter key):
+            </p>
+<source><![CDATA[
+cvs -d :pserver:anonymous@clirr.cvs.sourceforge.net:/cvsroot/clirr login
+cvs -z3 -d :pserver:anonymous@clirr.cvs.sourceforge.net:/cvsroot/clirr checkout clirr
+cd clirr
+mvn package
+]]></source>
+            <p>
+                Note that the anonymous CVS server on Sourceforge is
+                under heavy load, and you might experience
+                difficulties when checking out the sources. This is
+                temporary, please try again a few minutes
+                later.
+            </p>
+        </section>
+    </body>
+</document>

@@ -1,0 +1,9 @@
+velocity.log
+maven.log
+clirr.iws
+clirr.ipr
+clirr.iml
+target
+.classpath
+.project
+.settings
